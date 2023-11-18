@@ -1,0 +1,104 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Montserrat&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.header {
+  background-color: rgb(0, 0, 0);
+  height: 70vh;
+}
+.header h1 {
+  padding: 50px 0 10px 0;  
+  color: white;
+  font-size: 59px;
+  line-height: 45px;
+  text-align: center;
+  font-family: "Lobster", cursive;
+}
+.container {
+  height: 300px;
+  min-width: 200px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+.container h3{
+  font-weight: 300;
+  text-align: center;
+  font-family: "Homemade Apple";
+}
+.container img{
+  height: 10px;
+}
+.container a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: 0.3s ease all;
+}
+.container a:hover {
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+.source{
+    color: white;
+    margin-bottom: 6px;
+    font-size: 10px;
+}
+.source a{
+    color: white;
+    font-weight: 600;
+    transition: 0.1s ease all;
+}
+.source a:hover{
+    letter-spacing: 1px;
+}
+.footer {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(101, 101, 101);
+}
+.footer p {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 3px;
+  transition: 0.2s ease all;
+}
+.footer p:hover{
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 2px rgb(212, 1, 71);
+}
+.footer-title {
+  letter-spacing: 5px;
+  font-size: 12px;
+  background-color: rgb(196, 196, 255);
+}
