@@ -18,7 +18,7 @@ login.config(bg=login_bg)
 def logUser():
     user = username.get()
     pwd = password.get()
-    if user != "a" or pwd != "a":
+    if user != "" or pwd != "":
         messagebox.showwarning("Login Error", "Invalid username or password")
         username.delete(0, tk.END)
         password.delete(0, tk.END)
@@ -38,20 +38,20 @@ def logUser():
                 messagebox.showerror("Error", "Location does not exist!")
                 return
 
-            condition = json_data['weather'][0]['main']
-            description = json_data['weather'][0]['description']
-            temp = int(json_data['main']['temp'] - 273.15)
-            pressure = json_data['main']['pressure']
-            humidity = json_data['main']['humidity']
-            wind_speed = json_data['wind']["speed"]
-
+            condition_data = json_data['weather'][0]['main']
+            description_data = json_data['weather'][0]['description']
+            temp_data = int(json_data['main']['temp'] - 273.15)
+            pressure_data = json_data['main']['pressure']
+            humidity_data = json_data['main']['humidity']
+            wind_speed_data = json_data['wind']["speed"]
+        
             cityWdg.config(text=city)
-            temp.config(text=str(temp) + "°")
-            condition.config(text=condition + " | Feels Like " + str(temp) + "°")
-            wind.config(text=str(wind_speed))
-            humidity.config(text=str(humidity) + "%")
-            description.config(text=description)
-            pressure.config(text=str(pressure))
+            temp.config(text=str(temp_data) + "°")
+            condition.config(text=condition_data + " | Feels Like " + str(temp) + "°")
+            wind.config(text=str(wind_speed_data))
+            humidity.config(text=str(humidity_data) + "%")
+            description.config(text=description_data)
+            pressure.config(text=str(pressure_data))
 
         # Search Area
 
@@ -67,7 +67,7 @@ def logUser():
 
         name = Label(text="Current Weather", font=("cursive", 15, "bold"), fg="#ee666d", bg=dashboard_bg)
         name.place(x=130, y=200)
-        cityWdg = Label(font=("cursive", 15), fg="#ee666d", bg=dashboard_bg)
+        cityWdg = Label(text="---",font=("cursive", 15), fg="#ee666d", bg=dashboard_bg)
         cityWdg.place(x=130, y=230)
 
         # Middle right box
